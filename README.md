@@ -16,4 +16,4 @@ Hlavní menu obsahuje odkaz na homepage (seznam filmů) a odkaz na seznam osobno
 
 ## Wireframes
 
-![gamdb_wireframe](./gamdb_wireframe.png)
+![gamdb_wireframe](./gamdb_wireframe.jpg)
