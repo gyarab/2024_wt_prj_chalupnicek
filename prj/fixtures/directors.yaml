@@ -61,44 +61,38 @@
       Avary) a satiru Takoví normální zabijáci natočil Oliver Stone, který ovšem nechal
       provést rozsáhlé úpravy, kvůli čemu na něm pak Tarantino nenechal nitku suchou:
       „Kdyby mi ho alespoň ukradl“, řekl hořce."
+
 - model: main.director
   pk: 2
   fields:
     name: Martin Scorsese
     birth_year: 1942
-    description: Narodil se v New Yorku do rodiny italských přistěhovalců. Jeho otec
-      byl dělník a matka byla hospodyně. Vyrůstal v chudobě a od mládí se zajímal
-      o filmy. Po absolvování střední školy studoval na New York University, kde získal
-      bakalářský titul v oboru filmové vědy. Jeho první film, Who's That Knocking
-      at My Door, byl uveden v roce 1967 a získal si pozornost kritiků. V roce 1973
-      natočil svůj první velký úspěch, Mean Streets, který se stal kultovním snímkem
-      a otevřel mu dveře do Hollywoodu. Od té doby natočil řadu dalších úspěšných
-      filmů, včetně Taxi Driver, Raging Bull, Goodfellas a The Departed. Je známý
-      svým jedinečným stylem vyprávění a schopností zachytit temné stránky lidské
-      povahy.
+    description: "Narodil se v New Yorku do rodiny italských přistěhovalců. Jeho otec
+      byl zedník a matka švadlena. Vyrůstal v chudinské čtvrti Little Italy, kde se
+      setkal s násilím a zločinem. Scorsese studoval na vysoké škole, ale brzy se
+      rozhodl věnovat filmu. Jeho první filmy byly krátkometrážní snímky, které získaly
+      pozornost kritiků. V roce 1973 natočil svůj první celovečerní film Mean Streets,
+      který se stal kultovním dílem a otevřel mu dveře do Hollywoodu."
+
 - model: main.director
   pk: 3
   fields:
     name: Christopher Nolan
     birth_year: 1970
-    description: Narodil se v Londýně a vyrůstal v Anglii a USA. Jeho otec byl britský
-      novinář a matka byla americká herečka. V mládí se zajímal o filmy a začal natáčet
-      krátké filmy na videokameru. Po absolvování University College London studoval
-      filmovou vědu a začal pracovat na svých prvních filmech. Jeho první celovečerní
-      film, Following, byl uveden v roce 1998 a získal si pozornost kritiků. V roce
-      2000 natočil svůj první velký úspěch, Memento, který se stal kultovním snímkem
-      a otevřel mu dveře do Hollywoodu. Od té doby natočil řadu dalších úspěšných
-      filmů, včetně Inception, The Dark Knight Trilogy a Interstellar.
+    description: "Narodil se v Londýně do rodiny britského otce a americké matky. Vyrůstal
+      v různých zemích, včetně Anglie, USA a Kanady. Od mládí se zajímal o filmy a
+      začal natáčet krátkometrážní snímky. Jeho první celovečerní film Following z roku
+      1998 získal pozornost kritiků a otevřel mu dveře do Hollywoodu. V roce 2000
+      natočil svůj první velký hit Memento, který získal řadu ocenění."
+
 - model: main.director
   pk: 4
   fields:
     name: Steven Spielberg
     birth_year: 1946
-    description: Narodil se v Cincinnati, Ohio, do rodiny židovských přistěhovalců.
-      Jeho otec byl inženýr a matka byla učitelka. V mládí se zajímal o filmy a začal
-      natáčet krátké filmy na videokameru. Po absolvování California State University
-      studoval filmovou vědu a začal pracovat na svých prvních filmech. Jeho první
-      celovečerní film, Duel, byl uveden v roce 1971 a získal si pozornost kritiků.
-      V roce 1975 natočil svůj první velký úspěch, Jaws, který se stal kultovním snímkem
-      a otevřel mu dveře do Hollywoodu. Od té doby natočil řadu dalších úspěšných
-      filmů, včetně E.T., Jurassic Park a Schindler's List.
+    description: "Narodil se v Cincinnati, Ohio, do rodiny židovských přistěhovalců.
+      Vyrůstal v chudinské čtvrti a od mládí se zajímal o filmy. V roce 1969 natočil
+      svůj první celovečerní film Duel, který získal pozornost kritiků. V roce 1975
+      natočil svůj první velký hit Čelisti, který se stal jedním z nejúspěšnějších
+      filmů všech dob."
+      

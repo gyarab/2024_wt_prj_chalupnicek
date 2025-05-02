@@ -4,10 +4,11 @@ from main.models import Movie
 
 def get_homepage(request):
     movies = Movie.objects.all().order_by('title')
-
-    # check if search parameter is in the request
-    if request.GET.get("search"):
-        movies = movies.filter(title__icontains=request.GET.get("search"))
+    
+    # filter by title if query parameter search is present
+    search = request.GET.get('search')
+    if search:
+        movies = movies.filter(description__icontains=search)
 
     context = {
         "svatek": "Libor",

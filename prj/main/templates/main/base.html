@@ -12,7 +12,7 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand" href="/">GaFlix</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -32,19 +32,24 @@
                   </li>
                 </ul>
               </div>
+
               <form class="form-inline" method="GET" action="/">
-                <input 
-                  name="search"
-                  value="{{ request.GET.search }}"
+                <input
                   class="form-control mr-sm-2"
                   type="search"
+                  name="search"
+                  value="{{ request.GET.search }}"
                   placeholder="Search"
-                  aria-label="Search"
-                >
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  aria-label="Search" />
+                <button
+                  class="btn btn-outline-success my-2 my-sm-0"
+                  type="submit">
+                  Search
+                </button>
               </form>
-              </div>
-          </nav>
+
+            </div>
+        </nav>
 
         {% block content %}
             Tady bude obsah

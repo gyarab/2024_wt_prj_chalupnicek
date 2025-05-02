@@ -30,33 +30,35 @@
   fields:
     title: "Kill Bill: Volume 1"
     year: 2003
-    description: Po čtyřech letech se vrací Quentin Tarantino s novým filmem, který
-      je poctou japonským samurajským filmům a kung-fu snímkům. Uma Thurman hraje
-      ženu, která se probouzí z kómatu a vydává se na pomstu svým bývalým kolegům,
-      kteří ji zradili. Její cesta za pomstou ji zavede do Japonska, kde se utká s
-      nebezpečnou Yakuza.
+    description: Po čtyřech letech v komatu se probouzí nevěsta (Uma Thurman), která
+      se rozhodne pomstít svým bývalým kolegům z organizace, která ji zradila. Její
+      bývalý šéf Bill (David Carradine) a jeho zabijácká parta se snaží zbavit svědka
+      jejich zločinů. Nevěsta se vydává na krvavou cestu pomsty, která ji zavede do
+      Japonska, kde se utká s nebezpečnou samurajkou O-Ren Ishii (Lucy Liu).
     director: 1
 
 - model: main.movie
   pk: 4
   fields:
-    title: The Hateful Eight
-    year: 2015
-    description: Po letech se Quentin Tarantino vrací s novým westernem, který se
-      odehrává v zasněžených horách Wyomingu. Osm neznámých se shromáždí v horské
-      chatě, kde se snaží přežít bouři. Jakmile se však bouře uklidní, začíná se
-      odhalovat temná minulost každého z nich.
+    title: Once Upon a Time in Hollywood
+    year: 2019
+    description: Los Angeles, 1969. Rick Dalton (Leonardo DiCaprio) je herec, který
+      se snaží udržet svou kariéru v Hollywoodu. Jeho nejlepší přítel Cliff Booth
+      (Brad Pitt) je kaskadér, který mu pomáhá v těžkých časech. Když se Rick dostane
+      do konfliktu s mladou generací herců a režisérů, musí se rozhodnout, zda se
+      vzdá své kariéry nebo se postaví novým výzvám.
     director: 1
 
 - model: main.movie
   pk: 5
   fields:
-    title: The Departed
-    year: 2006
-    description: Martin Scorsese se vrací s napínavým thrillerem, který se odehrává
-      v Bostonu. Dva muži, jeden z policie a druhý z mafie, se snaží odhalit identitu
-      toho druhého. Film je plný napětí a překvapení a získal několik Oscarů, včetně
-      nejlepšího filmu.
+    title: The Wolf of Wall Street
+    year: 2013
+    description: Film je založen na skutečném příběhu Jordana Belforta (Leonardo
+      DiCaprio), makléře, který se dostal do světa podvodů a nelegálního obchodování
+      na Wall Street. Belfort žije extravagantním životem plným drog, sexu a peněz,
+      ale jeho úspěch přitahuje pozornost FBI, která se snaží zastavit jeho nelegální
+      aktivity.
     director: 2
 
 - model: main.movie
@@ -64,30 +66,90 @@
   fields:
     title: Inception
     year: 2010
-    description: Christopher Nolan přichází s revolučním sci-fi thrillerem, který
-      zkoumá hranice mezi snem a realitou. Hlavní postava, Dom Cobb, je odborník na
-      krádeže myšlenek a je najat, aby provedl neobvyklou misi - implantovat myšlenku
-      do mysli cílové osoby. Film je plný vizuálních efektů a složitých zápletek.
-    director: 3
+    description: Dom Cobb (Leonardo DiCaprio) je zloděj, který se specializuje na
+      krádeže myšlenek a vzpomínek. Jeho poslední úkol je nejtěžší - musí implantovat
+      myšlenku do mysli cílové osoby. Cobb a jeho tým se vydávají na nebezpečnou cestu
+      do snového světa, kde se musí vyrovnat s vlastními démony a překonat překážky,
+      které jim brání v úspěchu.
+    director: 2
 
 - model: main.movie
   pk: 7
   fields:
-    title: Interstellar
-    year: 2014
-    description: Christopher Nolan přichází s epickým sci-fi filmem, který zkoumá
-      otázky času, prostoru a lidské existence. Hlavní postava, Cooper, je astronaut,
-      který se vydává na nebezpečnou misi do jiných galaxií, aby zachránil lidstvo.
-      Film je plný emocionálních momentů a vizuálně ohromujících scén.
-    director: 3
+    title: The Dark Knight
+    year: 2008
+    description: Batman (Christian Bale) se snaží ochránit Gotham City před zločinem
+      a korupcí. Když se objeví nový zločinec Joker (Heath Ledger), Batman musí čelit
+      svému největšímu nepříteli a zároveň se vyrovnat s vlastním morálním dilematu.
+      Joker se snaží rozvrátit Gotham a přimět Batmana, aby překročil své hranice.
+    director: 2
+
 
 - model: main.movie
   pk: 8
   fields:
-    title: Jaws
-    year: 1975
-    description: Steven Spielberg přichází s napínavým thrillerem, který se odehrává
-      na pláži v Amity Island. Místní obyvatelé jsou terorizováni obrovským žralokem,
-      který zabíjí plavce. Policista, mořský biolog a lovec žraloků se spojí, aby
-      zastavili tuto hrozbu. Film je považován za jeden z nejlepších hororů všech dob.
-    director: 4
+    title: Schindler's List
+    year: 1993
+    description: Film je založen na skutečném příběhu Oskara Schindlera (Liam Neeson),
+      německého podnikatele, který během holocaustu zachránil více než tisíc židovských
+      životů tím, že je zaměstnal ve své továrně. Film ukazuje hrůzy holocaustu a
+      Schindlerovu proměnu z bezohledného obchodníka na hrdinu, který riskoval svůj
+      život, aby zachránil ostatní.
+    director: 3
+
+
+- model: main.movie
+  pk: 9
+  fields:
+    title: Goodfellas
+    year: 1990
+    description: Film je založen na skutečném příběhu Henryho Hilla (Ray Liotta), který
+      se dostal do světa mafie v New Yorku. Spolu s přáteli Jimmyem Conwayem (Robert
+      De Niro) a Tommym DeVitem (Joe Pesci) se dostává do světa zločinu, násilí a
+      zrady. Film ukazuje vzestup a pád Henryho Hilla a jeho život v mafii.
+    director: 3
+
+- model: main.movie
+  pk: 10
+  fields:
+    title: The Irishman
+    year: 2019
+    description: Film je založen na skutečném příběhu Franka Sheerana (Robert De Niro),
+      nájemného vraha, který pracoval pro mafii. Sheeran vzpomíná na svůj život a
+      vztah s Jimmy Hoffou (Al Pacino), odborovým vůdcem, který zmizel v roce 1975.
+      Film zkoumá témata přátelství, zrady a morálního dilematu.
+    director: 3
+
+- model: main.movie
+  pk: 11
+  fields:
+    title: The Departed
+    year: 2006
+    description: Film je remakem hongkongského filmu Infernal Affairs. Příběh se
+      odehrává v Bostonu, kde se policista Billy Costigan (Leonardo DiCaprio) infiltroval
+      do mafie vedené Frankem Costellem (Jack Nicholson). Zároveň se v mafii snaží
+      infiltrovat i policista Colin Sullivan (Matt Damon), který pracuje pro Costella.
+      Oba muži se snaží odhalit identitu toho druhého, což vede k napínavému závěru.
+    director: 3
+
+- model: main.movie 
+  pk: 12
+  fields:
+    title: The Aviator
+    year: 2004
+    description: Film je založen na skutečném příběhu Howarda Hughese (Leonardo DiCaprio),
+      filmového producenta a leteckého průkopníka. Film sleduje jeho život od jeho
+      úspěchů v Hollywoodu až po jeho psychické problémy a izolaci. Ukazuje jeho
+      vztahy s ženami, jeho vášeň pro létání a jeho boj s duševními problémy.
+    director: 3
+
+- model: main.movie
+  pk: 13
+  fields:
+    title: The Social Network
+    year: 2010
+    description: Film je založen na skutečném příběhu Marka Zuckerberga (Jesse Eisenberg),
+      zakladatele Facebooku. Příběh sleduje jeho cestu od studenta Harvardu po
+      miliardáře a zakladatele jedné z největších sociálních sítí na světě. Film
+      zkoumá témata přátelství, zrady a morálního dilematu.
+    director: 3
