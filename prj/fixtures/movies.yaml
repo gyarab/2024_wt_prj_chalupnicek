@@ -1,0 +1,93 @@
+- model: main.movie
+  pk: 1
+  fields:
+    title: Pulp Fiction
+    year: 1994
+    description: Nejkultovnější z kultovních filmů 90. let je autorskou Biblí Quentina
+      Tarantina, který v tomto opusu definoval základní prvky své režisérské poetiky
+      a vytvořil dílo rozněcující náročné kritiky na festivalu v Cannes, levicové
+      a pravicové intelektuály i zedníky dopřávající si po těžké šichtě trochu oddychu.
+      Pulp Fiction je multižánrovým opusem, který přetéká fetišistickými detaily a
+      popkulturními odkazy a zároveň dokonale funguje jako svrchovaně napínavý film
+      rozvržený do inovativní příběhové struktury. Chcete vidět homosexuální znásilnění
+      sbližující dva nepřátele na život a na smrt?
+    director: 1
+- model: main.movie
+  pk: 2
+  fields:
+    title: Django Unchained
+    year: 2012
+    description: Kultovní režisér Quentin Tarantino natočil jižanské drama z období
+      před vypuknutím Občanské války, jehož hlavním hrdinou je otrok Django. Ten má
+      šanci získat díky nájemnému lovci lidí dr. Schultzovi svobodu, pokud se mu povede
+      dopadnout vraždící bratry Brittlovi. Djangovi se tak zároveň naskytne příležitost
+      najít ženu, kterou musel před lety nedobrovolně opustit. Ani jeden z hlavních
+      hrdinů však netuší, jak blízko jsou nejnebezpečnějšímu dobrodružství svého života.
+    director: 1
+
+- model: main.movie
+  pk: 3
+  fields:
+    title: "Kill Bill: Volume 1"
+    year: 2003
+    description: Po čtyřech letech se vrací Quentin Tarantino s novým filmem, který
+      je poctou japonským samurajským filmům a kung-fu snímkům. Uma Thurman hraje
+      ženu, která se probouzí z kómatu a vydává se na pomstu svým bývalým kolegům,
+      kteří ji zradili. Její cesta za pomstou ji zavede do Japonska, kde se utká s
+      nebezpečnou Yakuza.
+    director: 1
+
+- model: main.movie
+  pk: 4
+  fields:
+    title: The Hateful Eight
+    year: 2015
+    description: Po letech se Quentin Tarantino vrací s novým westernem, který se
+      odehrává v zasněžených horách Wyomingu. Osm neznámých se shromáždí v horské
+      chatě, kde se snaží přežít bouři. Jakmile se však bouře uklidní, začíná se
+      odhalovat temná minulost každého z nich.
+    director: 1
+
+- model: main.movie
+  pk: 5
+  fields:
+    title: The Departed
+    year: 2006
+    description: Martin Scorsese se vrací s napínavým thrillerem, který se odehrává
+      v Bostonu. Dva muži, jeden z policie a druhý z mafie, se snaží odhalit identitu
+      toho druhého. Film je plný napětí a překvapení a získal několik Oscarů, včetně
+      nejlepšího filmu.
+    director: 2
+
+- model: main.movie
+  pk: 6
+  fields:
+    title: Inception
+    year: 2010
+    description: Christopher Nolan přichází s revolučním sci-fi thrillerem, který
+      zkoumá hranice mezi snem a realitou. Hlavní postava, Dom Cobb, je odborník na
+      krádeže myšlenek a je najat, aby provedl neobvyklou misi - implantovat myšlenku
+      do mysli cílové osoby. Film je plný vizuálních efektů a složitých zápletek.
+    director: 3
+
+- model: main.movie
+  pk: 7
+  fields:
+    title: Interstellar
+    year: 2014
+    description: Christopher Nolan přichází s epickým sci-fi filmem, který zkoumá
+      otázky času, prostoru a lidské existence. Hlavní postava, Cooper, je astronaut,
+      který se vydává na nebezpečnou misi do jiných galaxií, aby zachránil lidstvo.
+      Film je plný emocionálních momentů a vizuálně ohromujících scén.
+    director: 3
+
+- model: main.movie
+  pk: 8
+  fields:
+    title: Jaws
+    year: 1975
+    description: Steven Spielberg přichází s napínavým thrillerem, který se odehrává
+      na pláži v Amity Island. Místní obyvatelé jsou terorizováni obrovským žralokem,
+      který zabíjí plavce. Policista, mořský biolog a lovec žraloků se spojí, aby
+      zastavili tuto hrozbu. Film je považován za jeden z nejlepších hororů všech dob.
+    director: 4
