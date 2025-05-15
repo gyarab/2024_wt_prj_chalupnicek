@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+
+{% block 'title' %}Random person | {{ block.super }}{% endblock %}
+
+{% block content %}
+      <h1>Random person</h1>
+      
+      <p>
+          {{ name }}<br>
+          {{ email }}<br>
+          {{ phone }}<br>
+      </p>
+{% endblock %}

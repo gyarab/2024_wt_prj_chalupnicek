@@ -1,69 +1,33 @@
 - model: main.director
   pk: 1
   fields:
-    name: Quentin Tarantino
-    birth_year: 1963
-    description: "Narodil se teprve šestnáctileté Connii McHugh, která mu dala křestní
-      jméno podle své oblíbené postavy Quinta ze seriálu Gunsmoke. Jeho biologickým
-      otcem byl jistý Tony Tarantino, který rodinu opustil když byl Quentin ještě
-      malinký a nikdy o syna nejevil zájem (přesněji řečeno jen do doby, než se potomek
-      stal slavným – pak se na jeho úspěchu pokoušel parazitovat). Jeho náhradním
-      tatínkem se stal hudebník s československými kořeny, který si Connii vzal a
-      Quentina adoptoval – jeho příjmení má v našich končinách v tomto kontextu až
-      symbolický význam: jmenoval se Curt Zastoupil.\r\n\r\nRodiče (u tohoto slova
-      zůstaňme, protože navzdory rozvodu v roce 1973 Tarantino dodnes mluví o Zastoupilovi
-      jako o svém otci) se postarali i o zárodky jeho kinofilského vzdělání, když
-      jej pravidelně brávali do biografu, a to často i na filmy, které by dítě jeho
-      věku při “běžné” výchově rozhodně nevidělo. Mezi kousky, které byly do jeho
-      sítnice v raném věku vpáleny, patřily i takové drsňárny, jako Vysvobození nebo
-      Divoká banda.\r\n\r\nChlapcovo dětství a dospívání ovšem ovlivnily nejen filmy,
-      ale popkultura obecně. Televizní seriály, komiksy, populární hudba... to vše
-      jako mladý hltal ve velkém a stále neměl dost. Prakticky o nic jiného se nezajímal
-      a tehdy už bylo téměř jasné, že tenhle člověk skončí u filmu. Quentin odmítal
-      jíst cokoliv jiného než hot dogy nebo hamburgery. Bezradná Connie proto musela
-      všechna ostatní jídla nazývat těmito dvěma jmény, aby Quentin něco snědl. Pěkné
-      začátky popkulturního tvůrce, který to neměl vůbec jednoduché, ale nepředbíhejme.\r\n\r\nV
-      Los Angeles začal navštěvovat školu herectví, a protože brzy zmohutněl a vypadal
-      podstatně starší, než ve skutečnosti byl, našel si práci jako vyhazovač v pornokině.
-      O několik let později, coby zhruba dvaadvacetiletý, se stal členem týmu prestižní
-      videopůjčovny Video Archives na Manhattan Beach - kvůli tomu později získal
-      (ne)slavnou přezdívku \"magor z videopůjčovny\" -, kde nonstop sledoval filmy
-      a z většiny z nich dokázal odvyprávět téměř každou scénu. Lidé říkavali, že
-      je to jeho \"filmová škola\", ale Quentin řekl, že je to spíš jeho žurnál a
-      on je hlavním kritikem.\r\n\r\nZde se také seznámil s Rogerem Avarym, se kterým
-      později začali psát scénáře. Společně trávili celé dny s očima přisátýma k televizní
-      obrazovce. Sledovali a rozebírali cokoli, co jim přišlo pod ruku. Quentin si
-      pouštěl řadu scén několikrát, zpomaleně, pozpátku... studoval strukturu scény,
-      ale i střih, hudbu, hereckou práci, stylizaci dialogu - prostě všechno možné.
-      Jak sám řekl: „Když se mě lidi ptají, zda jsem chodil do filmové školy, odpovídám,
-      že jsem chodil na filmy.“ O mnoho let později, když  už byl úspěšný a bohatý,
-      a podnik naopak zavíral, prakticky celý jejiho archív koupil a takříkajíc si
-      onu půjčovnu zrekonstruoval ve svém domě. Když pak v létě 2022 začali s Rogerem
-      Avarym začali natáčet vlastní podcast, pojmenovali jej… \"Video Archives\".\r\n\r\nSvůj
-      první pokus o napsání scénáře udělal už ve čtrnácti (šlo o jakousi parafrázi
-      na Poldu a banditu, nazvanou “Captain Peachfuzz and the Anchovy Bandit”), ale
-      jeho první dílko, které aspoň částečně spatřilo světlo světa, se jmenovalo My
-      Best Friend's Birthday (Narozeniny mého nejlepšího kamaráda). Černobílá komedie
-      o jednom hodně nevydařeném večírku vznikala několik let, ve spolupráci především
-      s několika kamarády z videopůjčovny, ale nakonec nebyla nikdy oficiálně uvedena.
-      Z původně zamýšleného sedmdesátiminutového snímku údajně přežilo jen minut šestatřicet
-      a výsledek se do režisérovy “oficiální” filmografie nepočítá.\r\n\r\nTarantino
-      se v této době přihlásil i na kurzy herectví a byť v této profesi později díru
-      do světa neudělal, vždy se mu hodilo “rozumět” přístupu herců, které režíroval.
-      Nemluvě o tom, že si čas od času střihnul nějakou tu roličku jak ve svých filmech,
-      tak i ve snímcích spřízněných duší. A honorář za malinkou roličku imitátora
-      Elvise v seriálu The Golden Girls mu umožnil překlenout období, kdy se jeho
-      průběžně psané scénáře stále nedařilo realizovat.\r\n\r\nNezdar v podobě My
-      Best Friend's Birthday jej totiž rozhodně neodradil (a navíc - některé repliky
-      ze scénáře zrecykloval ve své další práci). Průběžně prodal hned dva později
-      zrealizované texty: krvavou road-movie Pravdivá romance zrežíroval Tony Scott
-      téměř beze změny (přepsán byl jen závěr, který místo Quentina upravil Roger
-      Avary) a satiru Takoví normální zabijáci natočil Oliver Stone, který ovšem nechal
-      provést rozsáhlé úpravy, kvůli čemu na něm pak Tarantino nenechal nitku suchou:
-      „Kdyby mi ho alespoň ukradl“, řekl hořce."
-
+    name: Joseph Kosinski
+    birth_year: 1974
+    description: ''
+    main_picture: ''
 - model: main.director
   pk: 2
+  fields:
+    name: Andrew Adamson
+    birth_year: 1966
+    description: ''
+    main_picture: ''
+- model: main.director
+  pk: 3
+  fields:
+    name: Quentin Tarantino
+    birth_year: 1963
+    description: ''
+    main_picture: ''
+- model: main.director
+  pk: 4
+  fields:
+    name: David Fincher
+    birth_year: 1962
+    description: ''
+    main_picture: ''
+- model: main.director
+  pk: 5
   fields:
     name: Martin Scorsese
     birth_year: 1942
@@ -75,7 +39,7 @@
       který se stal kultovním dílem a otevřel mu dveře do Hollywoodu."
 
 - model: main.director
-  pk: 3
+  pk: 6
   fields:
     name: Christopher Nolan
     birth_year: 1970
@@ -86,7 +50,7 @@
       natočil svůj první velký hit Memento, který získal řadu ocenění."
 
 - model: main.director
-  pk: 4
+  pk: 7
   fields:
     name: Steven Spielberg
     birth_year: 1946

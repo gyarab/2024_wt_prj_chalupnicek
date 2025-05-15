@@ -1,0 +1,25 @@
+- model: main.actor
+  pk: 1
+  fields:
+    name: Brad Pitt
+    birth_year: 1963
+    description: 'Od začátku devadesátých let přitahuje pozornost diváků i médií,
+      ale protože nehýří informacemi ani aférami ze svého soukromí, nezbývá, než si
+      přiznat, že Pitta téměř neznáme.   I když dnes nikdo nepochybuje o jeho hereckém
+      talentu, nezapomene přitom ani okomentovat jeho vzhled. Tu tvář už Pittovi nikdo
+      neodpáře, ačkoli tvrdí: „Kašlu na to jak vypadám, a celá ta hysterie okolo mne
+      už mi leze krkem...'
+    main_picture: //image.pmgstatic.com/cache/resized/w100h132crop/files/images/creator/photos/159/168/159168406_ea0e56.jpg
+- model: main.actor
+  pk: 2
+  fields:
+    name: Tom Cruise
+    birth_year: 1962
+    description: Největší hitmaker v Hollywoodu, v takové pozici se už roky nachází
+      herecká hvězda Tom Cruise, herec, jenž se narodil v kočovné rodině, která se
+      neustále stěhovala kvůli práci jeho otce (inženýra). Kvůli stěhování měl problémy
+      s učením, které byly spojeny s jeho dyslexií a tak vynikal pouze ve sportu.
+      Po dokončení střední školy se v roce 1980 odhodlal pro hereckou kariéru. Jako
+      většina herců začínal v divadle a v menších rolích v divácky celkem úspěšných
+      filmech…
+    main_picture: //image.pmgstatic.com/cache/resized/w100h132crop/files/images/creator/photos/166/432/166432435_af1fc8.jpg

@@ -1,7 +1,203 @@
 - model: main.movie
   pk: 1
   fields:
-    title: Pulp Fiction
+    name: 'Top Gun: Maverick'
+    year: 2022
+    footage: null
+    description: Pete „Maverick“ Mitchell (Tom Cruise) k smrti rád pilotuje stíhačky.
+      Dokonce tak, že se už přes třicet let úspěšně brání povýšení ve strukturách
+      amerického letectva, protože to by ho z kokpitu vyhnalo do vyhřáté kanceláře.
+      Maverick byl navíc vždycky magnetem na průšvihy, což se s armádní kariérou taky
+      docela vylučuje.
+    main_picture: //image.pmgstatic.com/cache/resized/w663/files/images/film/posters/166/205/166205318_28cfab.jpg
+    director: 1
+    actors:
+    - 2
+    genres:
+    - 1
+    - 2
+- model: main.movie
+  pk: 2
+  fields:
+    name: Shrek
+    year: 2001
+    footage: null
+    description: Odvážný Shrek (Mike Myers) pátrá se svým kamarádem, sympatickým a
+      chvastounským oslem (Eddie Murphy) po krásné a divoké princezně Fioně (Cameron
+      Diaz). Za její záchranu chce od intrikána Lorda Farquadda (John Lithgow) získat
+      zpět svou milovanou bažinu.
+    main_picture: //image.pmgstatic.com/cache/resized/w663/files/images/film/posters/158/600/158600745_6cc2db.jpg
+    director: 2
+    actors: []
+    genres:
+    - 3
+    - 4
+    - 5
+    - 6
+- model: main.movie
+  pk: 3
+  fields:
+    name: 'Pulp Fiction: Historky z podsvětí'
+    year: 1994
+    footage: null
+    description: Nejkultovnější z kultovních filmů 90. let je autorskou Biblí Quentina
+      Tarantina, který v tomto opusu definoval základní prvky své režisérské poetiky
+      a vytvořil dílo rozněcující náročné kritiky na festivalu v Cannes, levicové
+      a pravicové intelektuály i zedníky dopřávající si po těžké šichtě trochu oddychu.
+    main_picture: //image.pmgstatic.com/cache/resized/w663/files/images/film/posters/158/336/158336635_61bc7c.jpg
+    director: 3
+    actors: []
+    genres:
+    - 2
+    - 7
+- model: main.movie
+  pk: 4
+  fields:
+    name: Fight Club
+    year: 1999
+    footage: null
+    description: Když nemůžete půl roku usnout, celý okolní svět vám začne připadat
+      jako nekonečný sen. Všechno kolem vás je nedokonalou xeroxovou kopií sebe sama.
+      Chodíte do práce, díváte se na televizi a jste vděčni za to, když občas ztratíte
+      vědomí a nevíte o světě. Lidí s podobnými problémy moc není, ale mladý úspěšný
+      úředník, který si říká Jack, je jedním z nich. Má slušnou práci, vydělává slušné
+      peníze, ale trpí nejtěžší formou nespavosti. Na služební cestě se Jack seznámí
+      s Tylerem Durdenem, který mu nabídne příbytek pod podmínkou, že mu vrazí pořádnou
+      ránu. Tato "výměna názorů" se oběma zalíbí a brzy vznikne první Klub rváčů.
+      Místo, kde můžou mladí muži, znechucení světem, odložit své starosti a stát
+      se na pár minut zvířaty.
+    main_picture: //image.pmgstatic.com/cache/resized/w663/files/images/film/posters/162/468/162468180_3e343f.jpg
+    director: null
+    actors:
+    - 1
+    genres:
+    - 2
+    - 8
+- model: main.movie
+  pk: 5
+  fields:
+    name: Samotáři
+    year: 2000
+    footage: null
+    description: Sedm mladých lidí ve věku od 23 do 33 let se na konci devadesátých
+      let ve velkém městě pokouší praktikovat cosi, čemu se dříve říkalo milostný
+      vztah. A tak na sebe milostně narážejí a nechávají se unášet napříč dlouhodobějšími
+      či krátkodobějšími vztahy, které je dovedou zpět do samoty. Robert pracuje v
+      cestovní kanceláři a rád rozplétá a splétá osudy lidí. Napomůže rozchodu Hanky
+      a Petra, který se pokouší pochopit život skrze nahrávky „opravdového života“
+      pouštěné do éteru. Zatímco je Hanka pronásledována Ondřejem, do té doby uznávaným
+      lékařem a otcem rodiny, seznamuje se s Jakubem, jehož pozitivnímu pohledu na
+      svět pomáhá pravidelné užívání marihuany. Na druhé straně to ale způsobuje zhoršování
+      jeho krátkodobé paměti, takže se v jejich vztahu objevují problémy. Zklamaná
+      Hanka hledá pochopení u rodičů, ale doma najde jen dvacet Japonců sledujících
+      „normální rodinku při normální večeři“.
+    main_picture: //image.pmgstatic.com/cache/resized/w663/files/images/film/posters/158/305/158305223_c64891.jpg
+    director: null
+    actors: []
+    genres:
+    - 2
+    - 6
+
+
+- model: main.movie
+  pk: 6
+  fields:
+    name: Inception
+    year: 2010
+    description: Dom Cobb (Leonardo DiCaprio) je zloděj, který se specializuje na
+      krádeže myšlenek a vzpomínek. Jeho poslední úkol je nejtěžší - musí implantovat
+      myšlenku do mysli cílové osoby. Cobb a jeho tým se vydávají na nebezpečnou cestu
+      do snového světa, kde se musí vyrovnat s vlastními démony a překonat překážky,
+      které jim brání v úspěchu.
+    director: 5
+
+- model: main.movie
+  pk: 7
+  fields:
+    name: The Dark Knight
+    year: 2008
+    description: Batman (Christian Bale) se snaží ochránit Gotham City před zločinem
+      a korupcí. Když se objeví nový zločinec Joker (Heath Ledger), Batman musí čelit
+      svému největšímu nepříteli a zároveň se vyrovnat s vlastním morálním dilematu.
+      Joker se snaží rozvrátit Gotham a přimět Batmana, aby překročil své hranice.
+    director: 5
+
+
+- model: main.movie
+  pk: 8
+  fields:
+    name: Schindler's List
+    year: 1993
+    description: Film je založen na skutečném příběhu Oskara Schindlera (Liam Neeson),
+      německého podnikatele, který během holocaustu zachránil více než tisíc židovských
+      životů tím, že je zaměstnal ve své továrně. Film ukazuje hrůzy holocaustu a
+      Schindlerovu proměnu z bezohledného obchodníka na hrdinu, který riskoval svůj
+      život, aby zachránil ostatní.
+    director: 6
+
+
+- model: main.movie
+  pk: 9
+  fields:
+    name: Goodfellas
+    year: 1990
+    description: Film je založen na skutečném příběhu Henryho Hilla (Ray Liotta), který
+      se dostal do světa mafie v New Yorku. Spolu s přáteli Jimmyem Conwayem (Robert
+      De Niro) a Tommym DeVitem (Joe Pesci) se dostává do světa zločinu, násilí a
+      zrady. Film ukazuje vzestup a pád Henryho Hilla a jeho život v mafii.
+    director: 6
+
+- model: main.movie
+  pk: 10
+  fields:
+    name: The Irishman
+    year: 2019
+    description: Film je založen na skutečném příběhu Franka Sheerana (Robert De Niro),
+      nájemného vraha, který pracoval pro mafii. Sheeran vzpomíná na svůj život a
+      vztah s Jimmy Hoffou (Al Pacino), odborovým vůdcem, který zmizel v roce 1975.
+      Film zkoumá témata přátelství, zrady a morálního dilematu.
+    director: 6
+
+- model: main.movie
+  pk: 11
+  fields:
+    name: The Departed
+    year: 2006
+    description: Film je remakem hongkongského filmu Infernal Affairs. Příběh se
+      odehrává v Bostonu, kde se policista Billy Costigan (Leonardo DiCaprio) infiltroval
+      do mafie vedené Frankem Costellem (Jack Nicholson). Zároveň se v mafii snaží
+      infiltrovat i policista Colin Sullivan (Matt Damon), který pracuje pro Costella.
+      Oba muži se snaží odhalit identitu toho druhého, což vede k napínavému závěru.
+    director: 6
+
+- model: main.movie 
+  pk: 12
+  fields:
+    name: The Aviator
+    year: 2004
+    description: Film je založen na skutečném příběhu Howarda Hughese (Leonardo DiCaprio),
+      filmového producenta a leteckého průkopníka. Film sleduje jeho život od jeho
+      úspěchů v Hollywoodu až po jeho psychické problémy a izolaci. Ukazuje jeho
+      vztahy s ženami, jeho vášeň pro létání a jeho boj s duševními problémy.
+    director: 6
+
+- model: main.movie
+  pk: 13
+  fields:
+    name: The Social Network
+    year: 2010
+    description: Film je založen na skutečném příběhu Marka Zuckerberga (Jesse Eisenberg),
+      zakladatele Facebooku. Příběh sleduje jeho cestu od studenta Harvardu po
+      miliardáře a zakladatele jedné z největších sociálních sítí na světě. Film
+      zkoumá témata přátelství, zrady a morálního dilematu.
+    director: 6
+
+
+
+- model: main.movie
+  pk: 14
+  fields:
+    name: Pulp Fiction
     year: 1994
     description: Nejkultovnější z kultovních filmů 90. let je autorskou Biblí Quentina
       Tarantina, který v tomto opusu definoval základní prvky své režisérské poetiky
@@ -11,11 +207,11 @@
       popkulturními odkazy a zároveň dokonale funguje jako svrchovaně napínavý film
       rozvržený do inovativní příběhové struktury. Chcete vidět homosexuální znásilnění
       sbližující dva nepřátele na život a na smrt?
-    director: 1
+    director: 3
 - model: main.movie
-  pk: 2
+  pk: 15
   fields:
-    title: Django Unchained
+    name: Django Unchained
     year: 2012
     description: Kultovní režisér Quentin Tarantino natočil jižanské drama z období
       před vypuknutím Občanské války, jehož hlavním hrdinou je otrok Django. Ten má
@@ -23,133 +219,40 @@
       dopadnout vraždící bratry Brittlovi. Djangovi se tak zároveň naskytne příležitost
       najít ženu, kterou musel před lety nedobrovolně opustit. Ani jeden z hlavních
       hrdinů však netuší, jak blízko jsou nejnebezpečnějšímu dobrodružství svého života.
-    director: 1
+    director: 3
 
 - model: main.movie
-  pk: 3
+  pk: 16
   fields:
-    title: "Kill Bill: Volume 1"
+    name: "Kill Bill: Volume 1"
     year: 2003
     description: Po čtyřech letech v komatu se probouzí nevěsta (Uma Thurman), která
       se rozhodne pomstít svým bývalým kolegům z organizace, která ji zradila. Její
       bývalý šéf Bill (David Carradine) a jeho zabijácká parta se snaží zbavit svědka
       jejich zločinů. Nevěsta se vydává na krvavou cestu pomsty, která ji zavede do
       Japonska, kde se utká s nebezpečnou samurajkou O-Ren Ishii (Lucy Liu).
-    director: 1
+    director: 3
 
 - model: main.movie
-  pk: 4
+  pk: 17
   fields:
-    title: Once Upon a Time in Hollywood
+    name: Once Upon a Time in Hollywood
     year: 2019
     description: Los Angeles, 1969. Rick Dalton (Leonardo DiCaprio) je herec, který
       se snaží udržet svou kariéru v Hollywoodu. Jeho nejlepší přítel Cliff Booth
       (Brad Pitt) je kaskadér, který mu pomáhá v těžkých časech. Když se Rick dostane
       do konfliktu s mladou generací herců a režisérů, musí se rozhodnout, zda se
       vzdá své kariéry nebo se postaví novým výzvám.
-    director: 1
+    director: 3
 
 - model: main.movie
-  pk: 5
+  pk: 18
   fields:
-    title: The Wolf of Wall Street
+    name: The Wolf of Wall Street
     year: 2013
     description: Film je založen na skutečném příběhu Jordana Belforta (Leonardo
       DiCaprio), makléře, který se dostal do světa podvodů a nelegálního obchodování
       na Wall Street. Belfort žije extravagantním životem plným drog, sexu a peněz,
       ale jeho úspěch přitahuje pozornost FBI, která se snaží zastavit jeho nelegální
       aktivity.
-    director: 2
-
-- model: main.movie
-  pk: 6
-  fields:
-    title: Inception
-    year: 2010
-    description: Dom Cobb (Leonardo DiCaprio) je zloděj, který se specializuje na
-      krádeže myšlenek a vzpomínek. Jeho poslední úkol je nejtěžší - musí implantovat
-      myšlenku do mysli cílové osoby. Cobb a jeho tým se vydávají na nebezpečnou cestu
-      do snového světa, kde se musí vyrovnat s vlastními démony a překonat překážky,
-      které jim brání v úspěchu.
-    director: 2
-
-- model: main.movie
-  pk: 7
-  fields:
-    title: The Dark Knight
-    year: 2008
-    description: Batman (Christian Bale) se snaží ochránit Gotham City před zločinem
-      a korupcí. Když se objeví nový zločinec Joker (Heath Ledger), Batman musí čelit
-      svému největšímu nepříteli a zároveň se vyrovnat s vlastním morálním dilematu.
-      Joker se snaží rozvrátit Gotham a přimět Batmana, aby překročil své hranice.
-    director: 2
-
-
-- model: main.movie
-  pk: 8
-  fields:
-    title: Schindler's List
-    year: 1993
-    description: Film je založen na skutečném příběhu Oskara Schindlera (Liam Neeson),
-      německého podnikatele, který během holocaustu zachránil více než tisíc židovských
-      životů tím, že je zaměstnal ve své továrně. Film ukazuje hrůzy holocaustu a
-      Schindlerovu proměnu z bezohledného obchodníka na hrdinu, který riskoval svůj
-      život, aby zachránil ostatní.
-    director: 3
-
-
-- model: main.movie
-  pk: 9
-  fields:
-    title: Goodfellas
-    year: 1990
-    description: Film je založen na skutečném příběhu Henryho Hilla (Ray Liotta), který
-      se dostal do světa mafie v New Yorku. Spolu s přáteli Jimmyem Conwayem (Robert
-      De Niro) a Tommym DeVitem (Joe Pesci) se dostává do světa zločinu, násilí a
-      zrady. Film ukazuje vzestup a pád Henryho Hilla a jeho život v mafii.
-    director: 3
-
-- model: main.movie
-  pk: 10
-  fields:
-    title: The Irishman
-    year: 2019
-    description: Film je založen na skutečném příběhu Franka Sheerana (Robert De Niro),
-      nájemného vraha, který pracoval pro mafii. Sheeran vzpomíná na svůj život a
-      vztah s Jimmy Hoffou (Al Pacino), odborovým vůdcem, který zmizel v roce 1975.
-      Film zkoumá témata přátelství, zrady a morálního dilematu.
-    director: 3
-
-- model: main.movie
-  pk: 11
-  fields:
-    title: The Departed
-    year: 2006
-    description: Film je remakem hongkongského filmu Infernal Affairs. Příběh se
-      odehrává v Bostonu, kde se policista Billy Costigan (Leonardo DiCaprio) infiltroval
-      do mafie vedené Frankem Costellem (Jack Nicholson). Zároveň se v mafii snaží
-      infiltrovat i policista Colin Sullivan (Matt Damon), který pracuje pro Costella.
-      Oba muži se snaží odhalit identitu toho druhého, což vede k napínavému závěru.
-    director: 3
-
-- model: main.movie 
-  pk: 12
-  fields:
-    title: The Aviator
-    year: 2004
-    description: Film je založen na skutečném příběhu Howarda Hughese (Leonardo DiCaprio),
-      filmového producenta a leteckého průkopníka. Film sleduje jeho život od jeho
-      úspěchů v Hollywoodu až po jeho psychické problémy a izolaci. Ukazuje jeho
-      vztahy s ženami, jeho vášeň pro létání a jeho boj s duševními problémy.
-    director: 3
-
-- model: main.movie
-  pk: 13
-  fields:
-    title: The Social Network
-    year: 2010
-    description: Film je založen na skutečném příběhu Marka Zuckerberga (Jesse Eisenberg),
-      zakladatele Facebooku. Příběh sleduje jeho cestu od studenta Harvardu po
-      miliardáře a zakladatele jedné z největších sociálních sítí na světě. Film
-      zkoumá témata přátelství, zrady a morálního dilematu.
-    director: 3
+    director: 5

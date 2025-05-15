@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{movie.name}} | {{ block.super }}{% endblock %}
+
+{% block content %}
+
+    <div class="row my-3">
+        <div class="col">
+            <a href="{% url 'homepage' %}" class="btn btn-outline-primary">Zpět</a>
+        </div>
+    </div>
+    <hr>
+
+    <h1>{{ movie.name }}</h1>
+
+    <p>
+        {% if movie.main_picture %}
+            <img src="{{movie.main_picture}}" alt="Movie poster" class="img-fluid">
+        {% else %}
+            <img src="//place-hold.it/180x100/" alt="Movie poster" class="img-fluid">
+        {% endif %}
+    </p>
+
+    <p>
+        {% if movie.director %}
+            <h6>{{ movie.director }} ({{ movie.director.birth_year }})</h6>
+        {% endif %}
+        {% if movie.year %}
+            <h6>Rok: {{ movie.year }}</h6>
+        {% endif %}
+        {% if movie.footage %}
+            <h6>Délka: {{ movie.footage }} min</h6>
+        {% endif %}
+
+        {% for genre in movie.genres.all %}
+            <span class="badge bg-primary">{{ genre.name }}</span>
+        {% endfor %}
+
+    <p>
+        {{movie.description}}
+    </p>
+{% endblock %}
