@@ -35,24 +35,28 @@
         </ul>
     </div>
 
-    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
     <script>
         function addLike(movieId) {
-            $.ajax({
-                url: "/add_like/"+movieId+"/",
-                type: "POST",
-                data: {
-                    movie_id: movieId,
-                    csrfmiddlewaretoken: '{{ csrf_token }}'
+            // use fetch to send a POST request to the server
+            fetch(`/add_like/${movieId}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}"
                 },
-                success: function(response) {
-                    // Update the likes count in the UI
-                    var likesCount = $('#likes-count-' + movieId);
-                    likesCount.text(response.likes);
-                },
-                error: function(xhr, status, error) {
-                    console.error("Error adding like:", error);
+                body: JSON.stringify({ movie_id: movieId })
+            }).then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error("Network response was not ok");
                 }
+            }).then(data => {
+                // update the likes count on the page
+                const likesCountElement = document.getElementById(`likes-count-${movieId}`);
+                likesCountElement.textContent = data.likes;
+            }).catch(error => {
+                console.error("There was a problem with the fetch operation:", error);
             });
         }
     </script>
@@ -64,11 +68,11 @@
                 <img class="card-img-top" src="{% if movie.main_picture %}{{movie.main_picture}}{% else %}//place-hold.it/200x250/{% endif %}" alt="Card image cap">
                 <div class="card-body">
                     Likes <span id="likes-count-{{movie.id}}">{{ movie.likes|default:0 }}</span>
-                    # call ajax addlike
-                    <a href="#" class="btn btn-outline-secondary float-end" 
-                    hx-post="/add_like/{{movie.id}}/"
-                    hx-swap="innerHTML #likes-count-{{movie.id}}"
-                    style="margin-left: 5px;">Add like</a>
+                    <a
+                        href="javascript:void(0);"
+                        class="btn btn-outline-secondary float-end"
+                        onclick="addLike({{ movie.id }}); return false;"
+                    >Add like</a>
 
                     <h5 class="card-title">{{movie.name}} ({{ movie.year}})</h5>
                     {% if movie.director %}<h6>{{ movie.director}}</h6>{% endif %}

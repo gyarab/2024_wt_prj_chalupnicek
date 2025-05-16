@@ -26,6 +26,6 @@ urlpatterns = [
     path('one', TemplateView.as_view(template_name='main/one.html'), name='one'),
     path('two', TemplateView.as_view(template_name='main/two.html'), name='two'),
     path('random', random_person, name="random"),
-    path('add_like/<int:id>', add_like, name="add_like"),
+    path('add_like/<int:movie_id>', add_like, name="add_like"),
 
 ]
