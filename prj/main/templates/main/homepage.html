@@ -35,12 +35,41 @@
         </ul>
     </div>
 
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <script>
+        function addLike(movieId) {
+            $.ajax({
+                url: "/add_like/"+movieId+"/",
+                type: "POST",
+                data: {
+                    movie_id: movieId,
+                    csrfmiddlewaretoken: '{{ csrf_token }}'
+                },
+                success: function(response) {
+                    // Update the likes count in the UI
+                    var likesCount = $('#likes-count-' + movieId);
+                    likesCount.text(response.likes);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Error adding like:", error);
+                }
+            });
+        }
+    </script>
+
     <div class="row row-cols-1  row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-2">
     {% for movie in movies %}
         <div class="col">
-            <div class="card h-100" style="cursor: pointer;" onclick="location.href='{% url 'movie' movie.id %}'">
+            <div class="card h-100" style="cursor: pointer;" >
                 <img class="card-img-top" src="{% if movie.main_picture %}{{movie.main_picture}}{% else %}//place-hold.it/200x250/{% endif %}" alt="Card image cap">
                 <div class="card-body">
+                    Likes <span id="likes-count-{{movie.id}}">{{ movie.likes|default:0 }}</span>
+                    # call ajax addlike
+                    <a href="#" class="btn btn-outline-secondary float-end" 
+                    hx-post="/add_like/{{movie.id}}/"
+                    hx-swap="innerHTML #likes-count-{{movie.id}}"
+                    style="margin-left: 5px;">Add like</a>
+
                     <h5 class="card-title">{{movie.name}} ({{ movie.year}})</h5>
                     {% if movie.director %}<h6>{{ movie.director}}</h6>{% endif %}
                     

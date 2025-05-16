@@ -46,3 +46,9 @@ def random_person(request):
     return render(
         request, "main/random.html", context
     )
+
+def add_like(request, id):
+    movie = Movie.objects.get(id=id)
+    movie.likes += 1
+    movie.save()
+    return HttpResponse(status=200, content="{'status': 'ok', 'likes': "+str(movie.likes)+"}")

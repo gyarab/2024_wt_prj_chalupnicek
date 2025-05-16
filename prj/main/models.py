@@ -6,6 +6,7 @@ class Movie(models.Model):
     footage = models.PositiveSmallIntegerField(
         blank=True, null=True, help_text="in minutes"
     )
+    likes = models.PositiveSmallIntegerField(blank=True, null=True)
     description = models.TextField(blank=True)
     main_picture = models.CharField(blank=True, default="", max_length=2000)
     director = models.ForeignKey('Director', blank=True, null=True, on_delete=models.SET_NULL)
