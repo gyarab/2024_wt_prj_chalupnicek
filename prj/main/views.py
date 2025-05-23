@@ -51,7 +51,10 @@ def random_person(request):
 
 def add_like(request, movie_id):
     # movie_id = request.GET.get('movie_id')
-    movie = Movie.objects.get(id=movie_id)
+    try:
+        movie = Movie.objects.get(id=movie_id)
+    except Movie.DoesNotExist:
+        return HttpResponse(status=404, content='{"status": "error", "message": "Movie not found"}', content_type="application/json")
     if not movie.likes:
         movie.likes = 0
     movie.likes += 1
