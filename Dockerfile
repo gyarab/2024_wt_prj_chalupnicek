@@ -1,7 +1,7 @@
 FROM python:3.13
 
 COPY ./requirements.txt /
-RUN pip install --upgrade pip
+RUN pip install --upgrade pip uwsgi
 RUN pip install -r /requirements.txt
 
 ARG UID=1000
