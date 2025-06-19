@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-from main.views import get_homepage, get_movie, random_person
+from main.views import get_homepage, get_movie, random_person, add_like
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +26,6 @@ urlpatterns = [
     path('one', TemplateView.as_view(template_name='main/one.html'), name='one'),
     path('two', TemplateView.as_view(template_name='main/two.html'), name='two'),
     path('random', random_person, name="random"),
+    path('add_like/<int:movie_id>', add_like, name="add_like"),
 
 ]

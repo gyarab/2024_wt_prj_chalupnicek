@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from faker import Faker
+from django.http import HttpResponse
 
 from main.models import Movie, Genre
 
@@ -20,6 +21,7 @@ def get_homepage(request):
         # SELECT * from Movies ORDER BY 'name' LIMIT 10;
         "movies": movies,
         "genres": Genre.objects.all().order_by('name'),
+        "genre": genre,
     }
     return render(
         request, "main/homepage.html", context
@@ -46,3 +48,12 @@ def random_person(request):
     return render(
         request, "main/random.html", context
     )
+
+def add_like(request, movie_id):
+    # movie_id = request.GET.get('movie_id')
+    movie = Movie.objects.get(id=movie_id)
+    if not movie.likes:
+        movie.likes = 0
+    movie.likes += 1
+    movie.save()
+    return HttpResponse(status=200, content='{"status": "ok", "likes": "'+str(movie.likes)+'"}', content_type="application/json")

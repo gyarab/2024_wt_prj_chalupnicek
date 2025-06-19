@@ -35,12 +35,45 @@
         </ul>
     </div>
 
+    <script>
+        function addLike(movieId) {
+            // use fetch to send a POST request to the server
+            fetch(`/add_like/${movieId}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": "{{ csrf_token }}"
+                },
+                body: JSON.stringify({ movie_id: movieId })
+            }).then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error("Network response was not ok");
+                }
+            }).then(data => {
+                // update the likes count on the page
+                const likesCountElement = document.getElementById(`likes-count-${movieId}`);
+                likesCountElement.textContent = data.likes;
+            }).catch(error => {
+                console.error("There was a problem with the fetch operation:", error);
+            });
+        }
+    </script>
+
     <div class="row row-cols-1  row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-2">
     {% for movie in movies %}
         <div class="col">
-            <div class="card h-100" style="cursor: pointer;" onclick="location.href='{% url 'movie' movie.id %}'">
+            <div class="card h-100" style="cursor: pointer;" >
                 <img class="card-img-top" src="{% if movie.main_picture %}{{movie.main_picture}}{% else %}//place-hold.it/200x250/{% endif %}" alt="Card image cap">
                 <div class="card-body">
+                    Likes <span id="likes-count-{{movie.id}}">{{ movie.likes|default:0 }}</span>
+                    <a
+                        href="javascript:void(0);"
+                        class="btn btn-outline-secondary float-end"
+                        onclick="addLike({{ movie.id }}); return false;"
+                    >Add like</a>
+
                     <h5 class="card-title">{{movie.name}} ({{ movie.year}})</h5>
                     {% if movie.director %}<h6>{{ movie.director}}</h6>{% endif %}
                     
