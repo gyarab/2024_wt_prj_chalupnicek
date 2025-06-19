@@ -4,9 +4,9 @@
 
 Ukázkový ročníkový projekt z předmětu webové technologie ve šk. roce 2024/2025.
 
-## Odborný článek
+Filmová databáze – GyArab Movie DataBase (GAMDB) – je webová aplikace přístupná na <https://vch.gawt.dtcloud.cz>.
 
-Filmová databáze je webová aplikace přístupná na <https://gamdb.lab.gyarab.cz>.
+## Odborný článek
 
 V administraci se spravuje databáze filmů, každý film má název, hodnocení, popis, rok premiéry, žánry a obrázek (plakát). Každý film má jednoho režiséra a několik herců.
 
@@ -16,4 +16,43 @@ Hlavní menu obsahuje odkaz na homepage (seznam filmů) a odkaz na seznam osobno
 
 ## Wireframes
 
-![gamdb_wireframe](./gamdb_wireframe.jpg)
+![GAMDB Wireframe](./gamdb_wireframe.jpg)
+
+## Databázové schéma
+
+![GAMDB DB schema](./gamdb_db_schema.png)
+
+## Atributy modelů
+
+Příprava pro Django `models.py`.
+
+```python
+class Movie:
+    name = models.CharField(...)
+    year = models.PositiveSmallIntegerField(...)
+    footage = models.PositiveSmallIntegerField(...)
+    description = models.TextField(...)
+    main_picture = models.CharField(...) - bude obsahovat URL obrázku
+    director = models.ForeignKey(...)
+    actors = models.ManyToManyField(...)
+    genres = models.ManyToManyField(...)
+
+
+
+class Director:
+    name = models.CharField(...)
+    birth_year = models.PositiveSmallIntegerField(...)
+    description = models.TextField(...)
+    main_picture = models.CharField(...)
+
+
+class Actor:
+    name = models.CharField(...)
+    birth_year = models.PositiveSmallIntegerField(...)
+    description = models.TextField(...)
+    main_picture = models.CharField(...)
+
+
+class Genre:
+    name = models.CharField(...)
+```
