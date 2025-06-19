@@ -56,3 +56,16 @@ class Actor:
 class Genre:
     name = models.CharField(...)
 ```
+
+## Instalace na server
+
+Připojit se přes `ssh` na server, kde je nainstalovaný Docker. Vygenerovat si tam SSH klíč a přidat ho do repozitáře na GitHubu.
+
+Poté vyklonovat repozitář a spustit nasazení:
+
+```bash
+git clone git@github.com:gyarab/2024_wt_prj_chalupnicek.git
+cd 2024_wt_prj_chalupnicek
+
+./deploy.sh
+```
