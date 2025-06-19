@@ -28,7 +28,7 @@ services:
     restart: unless-stopped
 
     volumes:
-      - ./prj/static:/usr/share/nginx/html/static:ro
+      - ./prj/staticfiles:/usr/share/nginx/html/static:ro
 
     labels:
       - "traefik.enable=true"
