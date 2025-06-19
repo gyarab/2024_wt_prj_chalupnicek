@@ -69,3 +69,76 @@ cd 2024_wt_prj_chalupnicek
 
 ./deploy.sh
 ```
+
+Rychlý update bez build Docker image:
+
+```bash
+./update.sh
+```
+
+## Ovládání Dockeru
+
+Pro správu Docker kontejnerů použijte následující příkazy:
+
+```bash
+# Spuštění kontejnerů
+docker compose up -d
+# Zastavení kontejnerů
+docker compose down
+# Zobrazení běžících kontejnerů
+docker compose ps
+# Zobrazení všech kontejnerů
+docker compose ps -a
+# Zobrazení logů kontejneru s kontinuálním sledováním
+docker compose logs -f
+# Přístup do shellu kontejneru
+docker compose exec <service_name> bash
+```
+
+
+## Poslední lekce
+
+Zkopírujte do svých repoztářů tyto soubory:
+
+```bash
+./docker-compose.yml
+./Dockerfile
+./start.sh
+
+./deploy.sh
+./update.sh
+
+./prj/static/.gitkeep
+
+./prj/uwsgi.reload
+```
+
+V souboru `settings.py` v adresáři `prj` zkontrolujte proměnnou `ALLOWED_HOSTS`:
+
+```python
+...
+ALLOWED_HOSTS = ['*']
+...
+```
+
+a za `STATIC_URL` přidejte `STATIC_ROOT`:
+
+```python
+...
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+...
+```
+
+Pushněte změny do svého repozitáře a proveďte nasazení dle kapitoly [Instalace na server](#instalace-na-server).
+
+
+:tada:
+
+
+Co by se mělo udělat dál? Například:
+
+- Posílat SECRET_KEY do kontejneru jako proměnnou prostředí (ENV_VAR), aby se nepoužívala hodnota z git repozitáře.
+- Číst hodnotu DEBUG z ENV_VAR a nepoužívat ji přímo v `settings.py`.
+- Nastavit databázi PostgreSQL v samostatném kontejneru, místo současného SQLite.
+- Zautomatizovat nasazení pomocí GitHub Actions.
