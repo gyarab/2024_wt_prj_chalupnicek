@@ -59,9 +59,9 @@ class Genre:
 
 ## Instalace na server
 
-Připojit se přes `ssh` na server, kde je nainstalovaný Docker. Vygenerovat si tam SSH klíč a přidat ho do repozitáře na GitHubu.
+*Prerekvizita: Připojit se přes `ssh` na server, vygenerovat si tam SSH klíč a přidat ho do repozitáře na GitHubu.*
 
-Poté vyklonovat repozitář a spustit nasazení:
+Vyklonovat repozitář a spustit nasazení:
 
 ```bash
 git clone git@github.com:gyarab/2024_wt_prj_chalupnicek.git
@@ -83,18 +83,44 @@ Pro správu Docker kontejnerů použijte následující příkazy:
 ```bash
 # Spuštění kontejnerů
 docker compose up -d
+
 # Zastavení kontejnerů
 docker compose down
+
 # Zobrazení běžících kontejnerů
 docker compose ps
+
 # Zobrazení všech kontejnerů
 docker compose ps -a
+
 # Zobrazení logů kontejneru s kontinuálním sledováním
 docker compose logs -f
+
 # Přístup do shellu kontejneru
 docker compose exec <service_name> bash
 ```
 
+### Praktické příklady
+
+```bash
+# Spuštění kontejnerů
+docker compose up -d
+
+# Smazání databáze
+docker compose exec web rm -f prj/db.sqlite3
+
+# Spuštění migrací databáze (vyrvoření nové)
+docker compose exec web python manage.py migrate
+
+# Nahrání dat do databáze z jednoho souboru
+docker compose exec web python manage.py loaddata prj/fixtures/<soubor>.json
+
+# Nahrání dat do databáze z více souborů
+docker compose exec web bash -c 'python manage.py loaddata prj/fixtures/*.json'
+
+# Vytvoření superuživatele
+docker compose exec web python manage.py createsuperuser
+```
 
 ## Poslední lekce
 
