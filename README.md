@@ -4,9 +4,9 @@
 
 Ukázkový ročníkový projekt z předmětu webové technologie ve šk. roce 2024/2025.
 
-## Odborný článek
+Filmová databáze – GyArab Movie DataBase (GAMDB) – je webová aplikace přístupná na <https://vch.gawt.dtcloud.cz>.
 
-Filmová databáze je webová aplikace přístupná na <https://gamdb.lab.gyarab.cz>.
+## Odborný článek
 
 V administraci se spravuje databáze filmů, každý film má název, hodnocení, popis, rok premiéry, žánry a obrázek (plakát). Každý film má jednoho režiséra a několik herců.
 
@@ -16,4 +16,155 @@ Hlavní menu obsahuje odkaz na homepage (seznam filmů) a odkaz na seznam osobno
 
 ## Wireframes
 
-![gamdb_wireframe](./gamdb_wireframe.jpg)
+![GAMDB Wireframe](./gamdb_wireframe.jpg)
+
+## Databázové schéma
+
+![GAMDB DB schema](./gamdb_db_schema.png)
+
+## Atributy modelů
+
+Příprava pro Django `models.py`.
+
+```python
+class Movie:
+    name = models.CharField(...)
+    year = models.PositiveSmallIntegerField(...)
+    footage = models.PositiveSmallIntegerField(...)
+    description = models.TextField(...)
+    main_picture = models.CharField(...) - bude obsahovat URL obrázku
+    director = models.ForeignKey(...)
+    actors = models.ManyToManyField(...)
+    genres = models.ManyToManyField(...)
+
+
+
+class Director:
+    name = models.CharField(...)
+    birth_year = models.PositiveSmallIntegerField(...)
+    description = models.TextField(...)
+    main_picture = models.CharField(...)
+
+
+class Actor:
+    name = models.CharField(...)
+    birth_year = models.PositiveSmallIntegerField(...)
+    description = models.TextField(...)
+    main_picture = models.CharField(...)
+
+
+class Genre:
+    name = models.CharField(...)
+```
+
+## Instalace na server
+
+*Prerekvizita: Připojit se přes `ssh` na server, vygenerovat si tam SSH klíč a přidat ho do repozitáře na GitHubu.*
+
+Vyklonovat repozitář a spustit nasazení:
+
+```bash
+git clone git@github.com:gyarab/2024_wt_prj_chalupnicek.git
+cd 2024_wt_prj_chalupnicek
+
+./deploy.sh
+```
+
+Rychlý update bez build Docker image:
+
+```bash
+./update.sh
+```
+
+## Ovládání Dockeru
+
+Pro správu Docker kontejnerů použijte následující příkazy:
+
+```bash
+# Spuštění kontejnerů
+docker compose up -d
+
+# Zastavení kontejnerů
+docker compose down
+
+# Zobrazení běžících kontejnerů
+docker compose ps
+
+# Zobrazení všech kontejnerů
+docker compose ps -a
+
+# Zobrazení logů kontejneru s kontinuálním sledováním
+docker compose logs -f
+
+# Přístup do shellu kontejneru
+docker compose exec <service_name> bash
+```
+
+### Praktické příklady
+
+```bash
+# Spuštění kontejnerů
+docker compose up -d
+
+# Smazání databáze
+docker compose exec web rm -f prj/db.sqlite3
+
+# Spuštění migrací databáze (vyrvoření nové)
+docker compose exec web python manage.py migrate
+
+# Nahrání dat do databáze z jednoho souboru
+docker compose exec web python manage.py loaddata prj/fixtures/<soubor>.json
+
+# Nahrání dat do databáze z více souborů
+docker compose exec web bash -c 'python manage.py loaddata prj/fixtures/*.json'
+
+# Vytvoření superuživatele
+docker compose exec web python manage.py createsuperuser
+```
+
+## Poslední lekce
+
+Zkopírujte do svých repoztářů tyto soubory:
+
+```bash
+./docker-compose.yml
+./Dockerfile
+./start.sh
+
+./deploy.sh
+./update.sh
+
+./prj/staticfiles/.gitkeep
+
+./prj/uwsgi.reload
+```
+
+V souboru `settings.py` v adresáři `prj` zkontrolujte proměnnou `ALLOWED_HOSTS`:
+
+```python
+...
+ALLOWED_HOSTS = ['*']
+...
+```
+
+a za `STATIC_URL` přidejte `STATIC_ROOT`:
+
+```python
+...
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+...
+```
+
+Pushněte změny do svého repozitáře a proveďte nasazení dle kapitoly [Instalace na server](#instalace-na-server).
+
+
+:tada:
+
+
+Co by se mělo udělat dál? Například:
+
+- Posílat SECRET_KEY do kontejneru jako proměnnou prostředí (ENV_VAR), aby se nepoužívala hodnota z git repozitáře.
+- Číst hodnotu DEBUG z ENV_VAR a nepoužívat ji přímo v `settings.py`.
+- Nastavit databázi PostgreSQL v samostatném kontejneru, místo současného SQLite.
+- Zautomatizovat nasazení pomocí GitHub Actions.
