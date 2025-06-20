@@ -44,6 +44,7 @@ services:
       - "traefik.http.routers.wt-vch-static-https.entrypoints=websecure"
       - "traefik.http.routers.wt-vch-static-https.tls=true"
       - "traefik.http.routers.wt-vch-static-https.tls.certresolver=letsencrypt"
+
 networks:
   default:
     name: proxy

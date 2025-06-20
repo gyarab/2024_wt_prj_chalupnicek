@@ -134,7 +134,7 @@ Zkopírujte do svých repoztářů tyto soubory:
 ./deploy.sh
 ./update.sh
 
-./prj/static/.gitkeep
+./prj/staticfiles/.gitkeep
 
 ./prj/uwsgi.reload
 ```
